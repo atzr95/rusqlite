@@ -12,4 +12,8 @@ void *memmove(void *str1, const void *str2, size_t n);
 void *memset(void *str, int c, size_t n);
 
 #define DEF_STRONG(x)
+<<<<<<< HEAD
 #define __weak_alias(x, y)
+=======
+#define __weak_alias(x, y)
+>>>>>>> 82354cffd26a8e1c58613e21defe27110c141a1d
