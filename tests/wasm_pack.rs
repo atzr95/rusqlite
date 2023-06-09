@@ -55,8 +55,4 @@ fn node_test() {
         .query_row("SELECT cast(strftime('%Y') AS decimal)", [], |r| r.get(0))
         .unwrap();
     assert!((2022..2050).contains(&current_year));
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 82354cffd26a8e1c58613e21defe27110c141a1d

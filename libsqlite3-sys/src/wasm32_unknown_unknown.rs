@@ -178,8 +178,4 @@ pub unsafe extern "C" fn wasm_vfs_currenttime(_arg1: *mut sqlite3_vfs, pTime: *m
     // https://en.wikipedia.org/wiki/Julian_day
     *pTime = (js_sys::Date::now() / 86400000.0) + 2440587.5;
     SQLITE_OK
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 82354cffd26a8e1c58613e21defe27110c141a1d
