@@ -234,11 +234,7 @@ mod build_bundled {
                 cfg.flag("-DHAVE_ISNAN");
             }
         } else if env::var("TARGET") != Ok("wasm32-unknown-unknown".to_string()) {
-            cfg
-            .flag("-DHAVE_ISNAN")
-            .flag("-DSQLITE_ENABLE_ATOMIC_WRITE")
-            .flag("-DSQLITE_ENABLE_WASM_BATCH_MEMOP");
-
+            cfg.flag("-DHAVE_ISNAN");
         }
         if !win_target() {
             cfg.flag("-DHAVE_LOCALTIME_R");
@@ -272,6 +268,8 @@ mod build_bundled {
 
             cfg.flag("-DSQLITE_OS_OTHER")
                 .flag("-DSQLITE_TEMP_STORE=3")
+                .flag("-DSQLITE_ENABLE_ATOMIC_WRITE")
+                .flag("-DSQLITE_ENABLE_WASM_BATCH_MEMOP")
                 // https://github.com/rust-lang/rust/issues/74393
                 .flag("-DLONGDOUBLE_TYPE=double")
                 .flag("-DSQLITE_OMIT_LOCALTIME");
