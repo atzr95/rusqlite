@@ -129,6 +129,8 @@ mod build_bundled {
             .flag("-DSQLITE_THREADSAFE=0")
             .flag("-DSQLITE_USE_URI")
             .flag("-DHAVE_USLEEP=1")
+            .flag("-DSQLITE_ENABLE_ATOMIC_WRITE")
+.flag("-DSQLITE_ENABLE_WASM_BATCH_MEMOP")
             .flag("-D_POSIX_THREAD_SAFE_FUNCTIONS") // cross compile with MinGW
             .warnings(false);
 
